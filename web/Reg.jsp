@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/templatemo-style.css">
+<!--
+Puzzle Template
+http://www.templatemo.com/tm-477-puzzle
+-->
+    <title>User Registration</title>
+</head>
+
+<body>
+    
+    <br/><br/><br/><br/>
+    <div class="fixed-header">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="index.html">User Registration</a>
+            </div>
+            <nav class="main-menu">
+                <ul>
+                    <li><a class="external" href="index.jsp">Home Page</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+      <section class="col-md-12 content" id="contact">
+       <div class="col-lg-6 col-md-6 col-md-push-6 content-item">
+           <img src="images/4.jpg" alt="Image" class="tm-image">
+       </div>
+       <div class="col-lg-6 col-md-6 col-md-pull-6 content-item background flexbox">
+           <h2 class="section-title">Registration</h2>
+           <p class="margin-b-25">Register Here</p>
+
+           <!--<div class="row"> -->
+           <form method="post" action="RegisterServlet" name="contact-form" class="contact-form">
+             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad-l-3">
+                <div class="form-group contact-field">
+                    <input name="mail" type="text" class="form-control" id="email" placeholder="CREATE ID" required>
+                </div>    
+            </div>
+               
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad-l-3">
+                <div class="form-group contact-field">
+                    <input name="password" type="password" class="form-control" id="email" placeholder="PASSWORD" required>
+                </div>    
+            </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad-l-3">
+                <div class="form-group contact-field">
+                    <input name="state" type="text" class="form-control" id="email" placeholder="STATE" required>
+                </div>    
+            </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad-l-3">
+                <div class="form-group contact-field">
+                    <input name="country" type="text" class="form-control" id="email" placeholder="COUNTRY" required>
+                </div>    
+            </div>
+<!--               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad-l-3">
+                <div class="form-group contact-field">
+                    <input name="address" type="text" class="form-control" id="email" placeholder="ADDRESS" required>
+                </div>    
+            </div>-->
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group contact-field">
+                    <textarea name="address" rows="5" class="form-control" id="message" placeholder="Write your Address..." required></textarea>
+                </div>    
+            </div>
+
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad-l-3">
+                <div class="form-group contact-field">
+                    <input name="mobile" type="text" class="form-control" id="email" placeholder="MOBILE NUMBER" required>
+                </div>    
+            </div>
+           
+            
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group margin-b-0">
+                    <button type="submit" id="form-submit" class="btn no-bg btn-contact">Submit</button>&nbsp;&nbsp;
+                    <button type="reset" id="form-submit" class="btn no-bg btn-contact">Clear</button>
+                </div>    
+            </div>
+        </form>
+        <!--</div> -->
+        <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
+
+    </div>
+
+</section>
+
+<div class="text-center footer">
+	<div class="container">
+		Copyright @ 2020 Company Name 
+    
+    	| Design: <a href="" target="_parent" title="Puzzle Template">Cloud</a>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.singlePageNav.min.js"></script>
+
+<script>
+
+// Check scroll position and add/remove background to navbar
+function checkScrollPosition() {
+    if($(window).scrollTop() > 50) {
+      $(".fixed-header").addClass("scroll");
+  } else {        
+      $(".fixed-header").removeClass("scroll");
+  }
+}
+
+$(document).ready(function () {   
+    // Single page nav
+    $('.fixed-header').singlePageNav({
+        offset: 59,
+        filter: ':not(.external)',
+        updateHash: true        
+    });
+
+    checkScrollPosition();
+
+    // nav bar
+    $('.navbar-toggle').click(function(){
+        $('.main-menu').toggleClass('show');
+    });
+
+    $('.main-menu a').click(function(){
+        $('.main-menu').removeClass('show');
+    });
+});
+
+$(window).on("scroll", function() {
+    checkScrollPosition();    
+});
+</script>
+</body>
+</html>
